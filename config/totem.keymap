@@ -1,7 +1,5 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
 #define NAV  1
@@ -68,89 +66,17 @@
         &kp B               &kp L       &kp D           &kp C        &kp V        &kp J      &kp Y        &kp O             &kp U              &kp COMMA
         &mt LEFT_CONTROL N  &mt LALT R  &mt LEFT_GUI T  &mt LSHFT S  &kp G        &kp P      &mt RSHFT H  &mt RIGHT_GUI A   &mt RALT E         &mt RIGHT_CONTROL I
 &trans  &kp X               &kp Q       &kp M           &kp W        &kp Z        &kp K      &kp F        &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp PERIOD           &trans
-                                        &lt 4 ESCAPE    &lt 3 SPACE  &lt 2 TAB    &lt 2 RET  &lt 3 SPACE  &lt 4 BACKSPACE
+                                        &lt 0 ESCAPE    &lt 0 SPACE  &lt 0 TAB    &lt 0 RET  &lt 0 SPACE  &lt 0 BACKSPACE
             >;
         };
 
-        symb_layer {
+        symbol_layer {
             label = "SYMB";
             bindings = <
-        &kp GRAVE                     &kp TILDE            &kp HASH            &kp AMPERSAND       &kp PIPE         &kp CARET    &kp LEFT_BRACE                    &kp RIGHT_BRACE                  &kp LEFT_BRACKET     &kp RIGHT_BRACKET
-        &mt LEFT_CONTROL EXCLAMATION  &mt LALT UNDERSCORE  &mt LEFT_GUI COLON  &mt LSHFT KP_EQUAL  &kp DOLLAR       &kp AT_SIGN  &mt RIGHT_SHIFT LEFT_PARENTHESIS  &mt RIGHT_GUI RIGHT_PARENTHESIS  &mt RALT UNDERSCORE  &mt RIGHT_CONTROL SEMICOLON
-&trans  &kp PERCENT                   &kp QUESTION         &kp KP_ASTERISK     &kp KP_PLUS         &kp BACKSLASH    &kp SLASH    &kp KP_SUBTRACT                   &kp LESS_THAN                    &kp GREATER_THAN     &kp PERIOD                   &trans
-                                                           &lt 4 ESCAPE        &lt 3 SPACE         &lt 2 TAB        &lt 2 RET    &lt 3 SPACE                       &lt 4 BACKSPACE
-            >;
-        };
-
-        nav_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "NAVI";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃           ┃           ┃     UP    ┃           ┃     {     ┃   ┃     }     ┃     7     ┃     8     ┃     9     ┃     +     ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃   SHIFT   ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃     [     ┃   ┃     ]     ┃     4     ┃     5     ┃     6     ┃     -     ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃   P UP    ┃  C LOCK   ┃  P DOWN   ┃     (     ┃   ┃     )     ┃     1     ┃     2     ┃     3     ┃     *     ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃    TAB    ┃    SPC    ┃   ┃    DEL    ┃     0     ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-        &kp GRAVE        &kp TILDE              &kp HASH            &kp AMPERSAND            &kp PIPE         &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-        &kp EXCLAMATION  &mt LEFT_ALT KP_MINUS  &mt LEFT_GUI COLON  &mt LEFT_SHIFT KP_EQUAL  &kp DOLLAR       &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &kp PERCENT      &kp QUESTION           &kp KP_ASTERISK     &kp KP_PLUS              &kp BACKSLASH    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                                                &trans              &trans                   &trans           &mo 4     &kp KP_N0  &trans
-            >;
-        };
-
-        sim_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "SYM";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     Ü     ┃     '     ┃     "     ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃     Ä     ┃           ┃    SZ     ┃           ┃           ┃   ┃   MUTE    ┃   YEN     ┃   EURO    ┃  POUND    ┃     Ö     ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &gif      &mo 4        &trans        &kp C_PP        &trans
-            >;
-        };
-
-        adjust_layer {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "ADJ";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃    F12    ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃ BOOTLOAD  ┃ BT NEXT   ┃           ┃           ┃           ┃   ┃           ┃    F4     ┃    F5     ┃    F6     ┃    F11    ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F10    ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
-            bindings = <
-        &sys_reset   &bt BT_CLR  &out OUT_TOG  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &bootloader  &bt BT_NXT  &trans        &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans       &bt BT_PRV  &trans        &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                 &trans        &trans  &trans    &trans  &trans  &trans
+        &kp BACKSLASH                 &kp TILDE        &kp GRAVE           &kp QUESTION        &kp PIPE     &kp CARET     &kp LEFT_BRACE                    &kp RIGHT_BRACE                  &kp LEFT_BRACKET     &kp RIGHT_BRACKET
+        &mt LEFT_CONTROL EXCLAMATION  &mt LALT DOLLAR  &mt LEFT_GUI COLON  &mt LSHFT KP_EQUAL  &kp POUND    &kp KP_SLASH  &mt RIGHT_SHIFT LEFT_PARENTHESIS  &mt RIGHT_GUI RIGHT_PARENTHESIS  &mt RALT UNDERSCORE  &mt RIGHT_CONTROL SEMICOLON
+&trans  &kp PERCENT                   &kp AMPERSAND    &kp KP_ASTERISK     &kp KP_PLUS         &trans       &kp AT_SIGN   &kp KP_SUBTRACT                   &kp LESS_THAN                    &kp GREATER_THAN     &kp PERIOD                   &trans
+                                                       &lt 0 ESCAPE        &lt 0 SPACE         &lt 0 TAB    &lt 0 RET     &lt 0 SPACE                       &lt 0 BACKSPACE
             >;
         };
     };
