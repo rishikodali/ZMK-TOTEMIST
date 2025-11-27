@@ -63,30 +63,30 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp B               &kp L       &kp D           &kp C        &kp V        &kp J      &kp Y        &kp O             &kp U              &kp COMMA
-        &mt LEFT_CONTROL N  &mt LALT R  &mt LEFT_GUI T  &mt LSHFT S  &kp G        &kp P      &mt RSHFT H  &mt RIGHT_GUI A   &mt RALT E         &mt RIGHT_CONTROL I
-&trans  &kp X               &kp Q       &kp M           &kp W        &kp Z        &kp K      &kp F        &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp PERIOD           &trans
-                                        &lt 0 ESCAPE    &lt 0 SPACE  &lt 0 TAB    &lt 0 RET  &lt 0 SPACE  &lt 0 BACKSPACE
-            >;
-        };
-
-        symbol_layer {
-            label = "SYMB";
-            bindings = <
-        &kp BACKSLASH                 &kp TILDE        &kp AMPERSAND       &kp QUESTION        &kp PIPE     &kp CARET     &kp LEFT_BRACE                    &kp RIGHT_BRACE                  &kp LEFT_BRACKET     &kp RIGHT_BRACKET
-        &mt LEFT_CONTROL EXCLAMATION  &mt LALT DOLLAR  &mt LEFT_GUI COLON  &mt LSHFT KP_EQUAL  &kp POUND    &kp KP_SLASH  &mt RIGHT_SHIFT LEFT_PARENTHESIS  &mt RIGHT_GUI RIGHT_PARENTHESIS  &mt RALT UNDERSCORE  &mt RIGHT_CONTROL SEMICOLON
-&trans  &kp PERCENT                   &kp GRAVE        &kp KP_ASTERISK     &kp KP_PLUS         &trans       &kp AT_SIGN   &kp KP_SUBTRACT                   &kp LESS_THAN                    &kp GREATER_THAN     &kp PERIOD                   &trans
-                                                       &lt 0 ESCAPE        &lt 0 SPACE         &lt 0 TAB    &lt 0 RET     &lt 0 SPACE                       &lt 0 BACKSPACE
+        &kp B  &kp L               &kp D                  &kp C           &kp V        &kp J      &kp Y            &kp O                      &kp U                &kp COMMA
+        &kp N  &mt LEFT_CONTROL R  &mt LEFT_ALT T         &mt LEFT_GUI S  &kp G        &kp P      &mt RIGHT_GUI H  &mt RIGHT_ALT A            &mt RIGHT_CONTROL E  &kp I
+&trans  &kp X  &kp Q               &kp M                  &kp W           &kp Z        &kp K      &kp F            &kp SINGLE_QUOTE           &kp DOUBLE_QUOTES    &kp PERIOD  &trans
+                                   &mt LEFT_SHIFT ESCAPE  &lt 2 SPACE     &lt 1 TAB    &lt 1 RET  &lt 2 SPACE      &mt RIGHT_SHIFT BACKSPACE
             >;
         };
 
         navnum_layer {
             label = "NAVNUM";
             bindings = <
-        &trans                       &trans               &trans                 &trans                 &trans       &trans        &kp KP_NUMBER_4              &kp KP_NUMBER_5            &kp KP_NUMBER_6       &trans
-        &mt LEFT_CONTROL LEFT_ARROW  &mt LALT DOWN_ARROW  &mt LEFT_GUI UP_ARROW  &mt LSHFT RIGHT_ARROW  &trans       &kp KP_SLASH  &mt RIGHT_SHIFT KP_NUMBER_1  &mt RIGHT_GUI KP_NUMBER_2  &mt RALT KP_NUMBER_3  &mt RIGHT_CONTROL KP_NUMBER_0
-&trans  &trans                       &trans               &trans                 &trans                 &trans       &trans        &kp KP_NUMBER_7              &kp KP_NUMBER_8            &kp KP_NUMBER_9       &kp PERIOD                     &trans
-                                                          &lt 0 ESCAPE           &lt 0 SPACE            &lt 0 TAB    &lt 0 RET     &lt 0 SPACE                  &lt 0 BACKSPACE
+        &trans          &trans                       &trans                 &trans                    &trans       &trans        &kp KP_NUMBER_4            &kp KP_NUMBER_5            &kp KP_NUMBER_6                &trans
+        &kp LEFT_ARROW  &mt LEFT_CONTROL DOWN_ARROW  &mt LEFT_ALT UP_ARROW  &mt LEFT_GUI RIGHT_ARROW  &trans       &kp KP_SLASH  &mt RIGHT_GUI KP_NUMBER_1  &mt RIGHT_ALT KP_NUMBER_2  &mt RIGHT_CONTROL KP_NUMBER_3  &kp KP_NUMBER_0
+&trans  &trans          &trans                       &trans                 &trans                    &trans       &trans        &kp KP_NUMBER_7            &kp KP_NUMBER_8            &kp KP_NUMBER_9                &kp PERIOD       &trans
+                                                     &mt LEFT_SHIFT ESCAPE  &lt 2 SPACE               &lt 1 TAB    &lt 1 RET     &lt 2 SPACE                &mt RIGHT_SHIFT BACKSPACE
+            >;
+        };
+
+        symbol_layer {
+            label = "SYMB";
+            bindings = <
+        &kp BACKSLASH    &kp TILDE                &kp AMPERSAND          &kp QUESTION           &kp GRAVE    &kp AT_SIGN   &kp LEFT_BRACE                  &kp RIGHT_BRACE                  &kp LEFT_BRACKET              &kp RIGHT_BRACKET
+        &kp EXCLAMATION  &mt LEFT_CONTROL DOLLAR  &mt LEFT_ALT COLON     &mt LEFT_GUI KP_EQUAL  &kp POUND    &kp KP_SLASH  &mt RIGHT_GUI LEFT_PARENTHESIS  &mt RIGHT_ALT RIGHT_PARENTHESIS  &mt RIGHT_CONTROL UNDERSCORE  &kp SEMICOLON
+&trans  &kp PERCENT      &kp PIPE                 &kp KP_ASTERISK        &kp KP_PLUS            &trans       &kp CARET     &kp KP_SUBTRACT                 &kp LESS_THAN                    &kp GREATER_THAN              &kp PERIOD         &trans
+                                                  &mt LEFT_SHIFT ESCAPE  &lt 2 SPACE            &lt 1 TAB    &lt 1 RET     &lt 2 SPACE                     &mt RIGHT_SHIFT BACKSPACE
             >;
         };
     };
